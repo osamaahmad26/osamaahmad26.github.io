@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Event Tester</title>
+    <!-- Google Tag Manager Placeholder -->
+    <script>
+        // Insert Google Tag Manager Script Here
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        button, select {
+            margin: 10px 0;
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        select {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Interactive Event Tester</h1>
+    <p>Test multiple interactions below, and track events using Google Tag Manager.</p>
+
+    <section>
+        <h2>Event: Button Clicks</h2>
+        <button id="button1">Click Me 1</button>
+        <button id="button2">Click Me 2</button>
+        <button id="button3">Click Me 3</button>
+    </section>
+
+    <section>
+        <h2>Event: Form Submission</h2>
+        <form id="testForm">
+            <label for="inputField">Enter some text:</label>
+            <input type="text" id="inputField" placeholder="Type something">
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Event: Dropdown Selection</h2>
+        <label for="dropdown">Choose an option:</label>
+        <select id="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+    </section>
+
+    <section>
+        <h2>Event: Link Clicks</h2>
+        <a href="#" id="testLink1">Test Link 1</a>
+        <a href="#" id="testLink2">Test Link 2</a>
+    </section>
+
+    <section>
+        <h2>Event: Textarea Input</h2>
+        <label for="textarea">Write something:</label>
+        <textarea id="textarea" rows="4" placeholder="Type your message here..."></textarea>
+    </section>
+
+    <section>
+        <h2>Custom Events</h2>
+        <button id="customEventButton1">Custom Event 1</button>
+        <button id="customEventButton2">Custom Event 2</button>
+    </section>
+</body>
+</html>
