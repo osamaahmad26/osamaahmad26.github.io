@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7N2MXR3PWM"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -10,88 +10,136 @@
     
       gtag('config', 'G-7N2MXR3PWM');
     </script>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Blog, just for shits and giggles</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif; /* Modern font */
             margin: 20px;
-            line-height: 1.6;
+            background-color: #f4f4f4; /* Light background */
+            color: #333; /* Dark text color */
         }
-        button, select {
-            margin: 10px 0;
-            padding: 10px 15px;
-            font-size: 16px;
+
+        h1 {
+            text-align: center;
+            color: #007bff; /* Blue heading */
+            margin-bottom: 20px;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white; /* White post background */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
+        .blog-title {
+            font-size: 1.8em;
+            color: #0056b3; /* Darker blue title */
+            margin-bottom: 10px;
+        }
+
+        .blog-content { /* Added a class for content */
+            line-height: 1.6; /* Improved readability */
+        }
+
+        .social-buttons {
+            margin-top: 15px;
+        }
+
+        .social-buttons a {
+            display: inline-block; /* Make buttons inline */
+            margin-right: 10px;
+            padding: 8px 16px;
+            background-color: #007bff; /* Blue buttons */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+
+        .social-buttons a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        #subscription-section { /* Style the subscription section */
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #subscribeEmail {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #subscriptionMessage {
+            margin-top: 10px;
+            color: green; /* Success message color */
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
             border: none;
             border-radius: 5px;
-            background-color: #007BFF;
-            color: white;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
-        button:hover {
+         button:hover {
             background-color: #0056b3;
-        }
-        select {
-            background-color: #f0f0f0;
-            color: #333;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        textarea {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>Interactive Event Tester</h1>
-    <p>Test multiple interactions below, and track events using Google Tag Manager.</p>
 
-    <section>
-        <h2>Event: Button Clicks</h2>
-        <button id="button1">Click Me 1</button>
-        <button id="button2">Click Me 2</button>
-        <button id="button3">Click Me 3</button>
-    </section>
+    <h1>My Blog</h1>
 
-    <section>
-        <h2>Event: Form Submission</h2>
-        <form id="testForm">
-            <label for="inputField">Enter some text:</label>
-            <input type="text" id="inputField" placeholder="Type something">
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <div class="blog-post">
+        <h2 class="blog-title">First Blog Post</h2>
+        <div class="blog-content"> <p>This is the content of my very first blog post.  Welcome!</p> </div>
+        <div class="social-buttons">
+            <a href="#" target="_blank">Share on Twitter</a>
+            <a href="#" target="_blank">Share on Facebook</a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Event: Dropdown Selection</h2>
-        <label for="dropdown">Choose an option:</label>
-        <select id="dropdown">
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-        </select>
-    </section>
+    <div class="blog-post">
+        <h2 class="blog-title">Second Post</h2>
+        <div class="blog-content"> <p>This is another blog post.  I'm getting the hang of this!</p> </div>
+        <div class="social-buttons">
+            <a href="#" target="_blank">Share on Twitter</a>
+            <a href="#" target="_blank">Share on Facebook</a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Event: Link Clicks</h2>
-        <a href="https://www.southparkstudios.com/episodes/ohj8pg/south-park-back-to-the-cold-war-season-25-ep-4" id="testLink1">Ep4</a>
-        <a href="https://www.southparkstudios.com/episodes/ohj8pg/south-park-back-to-the-cold-war-season-25-ep-5" id="testLink2">Ep5</a>
-    </section>
+    <div id="subscription-section">
+        <h2>Subscribe to my blog</h2>
+        <p>Enter your email address:</p>
+        <input type="email" id="subscribeEmail" placeholder="your@email.com">
+        <button onclick="subscribe()">Subscribe</button>
+        <div id="subscriptionMessage"></div>
+    </div>
 
-    <section>
-        <h2>Event: Textarea Input</h2>
-        <label for="textarea">Write something:</label>
-        <textarea id="Text Area" rows="4" placeholder="Type your message here..."></textarea>
-    </section>
+    <script>
+        function subscribe() {
+            const email = document.getElementById('subscribeEmail').value;
+            const messageDiv = document.getElementById('subscriptionMessage');
 
-    <section>
-        <h2>Custom Events</h2>
-        <button id="customEventButton1">Custom Event 1</button>
-        <button id="customEventButton2">Custom Event 2</button>
-    </section>
+            if (email) {
+                messageDiv.textContent = "Thank you for subscribing!";
+                document.getElementById('subscribeEmail').value = "";
+            } else {
+                messageDiv.textContent = "Please enter a valid email address.";
+            }
+        }
+    </script>
+
 </body>
 </html>
